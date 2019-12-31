@@ -20,30 +20,38 @@ import * as Scroll from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
 const useStyles = makeStyles({
   card: {
-    maxWidth: 345
+    maxWidth: 300,
+    minWidth: 275,
+    background: "main"
   },
   media: {
     height: 140
-  }
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
 });
 
 function DownScroll() {
-  scroll.scrollToBottom();
+  scroll.scrollMore(900);
 }
 function App() {
   const classes = useStyles();
   return (
     <div className="App">
       <Container className="Navigation">
-        <Link href="#" className="NavLink">
+        <Link href="robots.txt" className="NavLink" download>
           Resume
         </Link>
-        <Link href="#" className="NavLink">
-          Skills
-        </Link>
-        <Link href="#" className="NavLink">
-          About
-        </Link>
+       
       </Container>
 
       <Container className="App-header">
@@ -92,16 +100,16 @@ function App() {
         </Fab>
       </Container>
 
-      <Container className="SubText">
+      {/* <Container className="SubText">
         <h2>
           {" "}
-          I enjoy using new technology to build things that impact others,
+          I am a high school student who enjoys using new technology to build things that impact others,
           whether with artificial intelligence, full-stack web developement, or
           Wordpress.
         </h2>
-      </Container>
+      </Container> */}
 
-      <Container className ="ProjectDisplay">
+      <Container className="ProjectDisplay">
         <h2>Projects</h2>
         <Container className="Projects">
           <Card className={classes.card}>
@@ -182,6 +190,62 @@ function App() {
               <Button size="small" color="primary">
                 Learn More
               </Button>
+            </CardActions>
+          </Card>
+        </Container>
+      </Container>
+      <Container className="ProjectDisplay">
+        <h2>Publications</h2>
+        <Container className="Projects">
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.media}
+              image="https://resnovaemv.files.wordpress.com/2019/02/technology-1587673_1920.jpg?w=1080"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="body1">
+                Monta Vista Res Novae
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                The InterPlanetary File System: The New “Permanent Web”
+              </Typography>
+            </CardContent>
+
+            <CardActions>
+              <Button size="small" color="primary">
+                <Link href="https://mvresnovae.org/2018/11/22/the-interplanetary-file-system-the-new-permanent-web/">
+                  Read
+                </Link>
+              </Button>
+            </CardActions>
+          </Card>
+        </Container>
+      </Container>
+      <Container className="ProjectDisplay">
+        <h2>Awards</h2>
+        <Container className="Projects">
+          <Card className={classes.card} background="primary">
+            <CardContent>
+              <Typography
+                className={classes.title}
+                color="textSecondary"
+                gutterBottom
+              >
+                FBLA
+              </Typography>
+              <Typography variant="body1">
+                Business Financial Plan
+              </Typography>
+              
+              <Typography variant="body2">
+                1st Place - State Level
+              </Typography>
+              <Typography variant="body2">
+                5th Place - National Level 
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Learn More</Button>
             </CardActions>
           </Card>
         </Container>

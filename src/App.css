@@ -1,28 +1,54 @@
-.App {
+.App .App2 {
   background-color: #d9d9d9;
-  min-height: 100vh;
+  /* min-height: 300vh; */
+}
+.App {
+  min-height: 300vh;
 }
 
+.App2 {
+  min-height: 10vh;
+}
 
+.aboutImage {
+  width: 35vw;
+}
 
+.description {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+}
+
+.descriptionText {
+  padding: 70px;
+  padding-top: 15px;
+  font-size: 1.75rem;
+}
+
+.logoImage {
+  padding-left: 4vw; 
+  padding-right: 4vw;
+  padding-top: 5vh;
+  width: 2.5vw;
+}
 .programmer {
   white-space: nowrap;
-  color: #4484CE;
+  color: #4484ce;
 }
 
 .name {
- color: #565656
-  
+  color: #565656;
 }
 .leadership {
-  color: #F19F4D;
+  color: #f19f4d;
 }
 
 .Navigation {
-  display: flex;
-
+  /* display: flex; */
+  /* margin-left: 200px; */
   /* text-align: right; */
-  justify-content: right;
+  /* justify-content: right; */
 }
 
 .NavLink {
@@ -46,10 +72,9 @@
   /* align-items: left; */
   /* justify-content: center; */
 
-  
   font-size: calc(10px + 2vmin);
   /* color: #565656; */
-  color: #1D2731;
+  color: #1d2731;
 }
 
 .ProjectDisplay {
@@ -62,18 +87,15 @@
   /* align-items: left; */
   /* justify-content: center; */
 
-  
   font-size: calc(15px + 2vmin);
   /* color: #565656; */
-  color: #1D2731;
+  color: #1d2731;
 }
 
 .Projects {
   display: flex;
   flex-direction: row;
-  
 }
-
 
 .DownButton {
   display: flex;
@@ -92,5 +114,5 @@
   padding-top: 100px;
   font-size: calc(20px + 2vmin);
   /* color: #565656; */
-  color: #1D2731;
+  color: #1d2731;
 }
