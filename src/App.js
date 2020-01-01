@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+import logo from "./Logo.png";
 import "./App.css";
 import {
   Typography,
@@ -11,7 +11,13 @@ import {
   CardContent,
   Button,
   CardMedia,
-  CardActionArea
+  CardActionArea,
+  Box,
+  Tab,
+  Tabs,
+  AppBar,
+  IconButton,
+  
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { ExpandMore } from "@material-ui/icons";
@@ -28,16 +34,16 @@ const useStyles = makeStyles({
     height: 140
   },
   bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
+    display: "inline-block",
+    margin: "0 2px",
+    transform: "scale(0.8)"
   },
   title: {
-    fontSize: 14,
+    fontSize: 14
   },
   pos: {
-    marginBottom: 12,
-  },
+    marginBottom: 12
+  }
 });
 
 function DownScroll() {
@@ -47,12 +53,23 @@ function App() {
   const classes = useStyles();
   return (
     <div className="App">
+      {/* <div className="Header"> */}
       <Container className="Navigation">
-        <Link href="robots.txt" className="NavLink" download>
-          Resume
-        </Link>
        
+          <Link href="/" className="logoImageContainer">
+            <img src={logo} className="logoImage"></img>
+          </Link>
+        
+          <Link href="robots.txt" className="NavLink" download>
+            Resume
+          </Link>
+        
+          <Link href="/about" className="NavLink">
+            About
+          </Link>
+        
       </Container>
+      {/* </div> */}
 
       <Container className="App-header">
         <Typist cursor={{ show: false }} avgTypingDelay={20}>
@@ -233,15 +250,11 @@ function App() {
               >
                 FBLA
               </Typography>
-              <Typography variant="body1">
-                Business Financial Plan
-              </Typography>
-              
+              <Typography variant="body1">Business Financial Plan</Typography>
+
+              <Typography variant="body2">1st Place - State Level</Typography>
               <Typography variant="body2">
-                1st Place - State Level
-              </Typography>
-              <Typography variant="body2">
-                5th Place - National Level 
+                5th Place - National Level
               </Typography>
             </CardContent>
             <CardActions>

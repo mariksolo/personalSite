@@ -25,9 +25,15 @@ function About() {
   return (
     <div className="App2">
       <Container className="Navigation">
-        <img src={logo} className="logoImage"></img>
+      <Link href="/" className="logoImageContainer">
+            <img src={logo} className="logoImage"></img>
+          </Link>
+        
         <Link href="robots.txt" className="NavLink" download>
           Resume
+        </Link>
+        <Link href="/about" className="NavLink">
+          About
         </Link>
       </Container>
       <Container className='description'>

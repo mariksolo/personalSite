@@ -27,11 +27,14 @@
 }
 
 .logoImage {
-  padding-left: 4vw; 
-  padding-right: 4vw;
-  padding-top: 5vh;
+  /* padding-left: 4vw; 
+  padding-right: 4vw; */
+  position: absolute;
+  padding-top: 0vh;
+  /* margin-top: 20px; */
   width: 2.5vw;
 }
+
 .programmer {
   white-space: nowrap;
   color: #4484ce;
@@ -46,14 +49,18 @@
 
 .Navigation {
   /* display: flex; */
+  padding-top: 2vh;
+  margin-top: 0px;
   /* margin-left: 200px; */
   /* text-align: right; */
-  /* justify-content: right; */
+  /* justify-content: space-around; */
 }
 
 .NavLink {
-  padding-right: 50px;
-  padding-top: 20px;
+  padding-left: 100px;
+  padding-top: 0px;
+  margin-top: 20px;
+  
   font-size: calc(10px + 2vmin);
   color: #565656 !important;
 }
